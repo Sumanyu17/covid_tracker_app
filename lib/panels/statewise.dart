@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class MostAffectedPanel extends StatelessWidget {
-  final List countryData;
+class Statewisepanel extends StatelessWidget {
+  final List stateData;
 
-  const MostAffectedPanel({Key key, this.countryData}) : super(key: key);
+  const Statewisepanel({Key key, this.stateData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,18 +16,10 @@ class MostAffectedPanel extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Row(
               children: <Widget>[
-                Image.network(
-                  countryData[index]['countryInfo']['flag'],
-                  height: 25,
-                  width: 40,
-                ),
-                SizedBox(
-                  width: 10,
-                ),
                 Container(
-                  width: 60,
+                  width: 112,
                   child: Text(
-                    countryData[index]['country'],
+                    stateData[index]['state'],
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
@@ -41,12 +33,14 @@ class MostAffectedPanel extends StatelessWidget {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  'Deaths:' + countryData[index]['deaths'].toString(),
-                  style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16),
+                Container(
+                  child: Text(
+                    'Deaths: ' + stateData[index]['deaths'].toString(),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.red),
+                  ),
                 ),
               ],
             ),

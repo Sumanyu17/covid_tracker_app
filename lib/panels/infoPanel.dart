@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tgd_covid_tracker/datasorce.dart';
-import 'package:tgd_covid_tracker/pages/faqs.dart';
+import 'package:covid_tracker/datasorce.dart';
+import 'package:covid_tracker/pages/faqs.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InfoPanel extends StatelessWidget {
@@ -16,8 +16,10 @@ class InfoPanel extends StatelessWidget {
             },
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.red.shade600),
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: primaryBlack,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -29,7 +31,7 @@ class InfoPanel extends StatelessWidget {
                         fontSize: 18),
                   ),
                   Icon(
-                    Icons.arrow_forward,
+                    Icons.question_answer_outlined,
                     color: Colors.white,
                   )
                 ],
@@ -42,8 +44,10 @@ class InfoPanel extends StatelessWidget {
             },
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.red.shade600),
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: primaryBlack,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -55,7 +59,7 @@ class InfoPanel extends StatelessWidget {
                         fontSize: 18),
                   ),
                   Icon(
-                    Icons.arrow_forward,
+                    Icons.attach_money_rounded,
                     color: Colors.white,
                   )
                 ],
@@ -69,8 +73,10 @@ class InfoPanel extends StatelessWidget {
             },
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.red.shade600),
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: primaryBlack,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[

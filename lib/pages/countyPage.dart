@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
-import 'package:tgd_covid_tracker/pages/search.dart';
+import 'package:covid_tracker/pages/search.dart';
 
 class CountryPage extends StatefulWidget {
   @override
@@ -13,7 +12,6 @@ class _CountryPageState extends State<CountryPage> {
   List countryData;
 
   fetchCountryData() async {
-    
     http.Response response =
         await http.get('https://corona.lmao.ninja/v2/countries');
     setState(() {
@@ -32,11 +30,12 @@ class _CountryPageState extends State<CountryPage> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.search),onPressed: (){
-
-            showSearch(context: context, delegate: Search(countryData));
-
-          },)
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              showSearch(context: context, delegate: Search(countryData));
+            },
+          )
         ],
         title: Text('Country Stats'),
       ),
@@ -101,7 +100,10 @@ class _CountryPageState extends State<CountryPage> {
                                     countryData[index]['deaths'].toString(),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Theme.of(context).brightness==Brightness.dark?Colors.grey[100]:Colors.grey[900]),
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? Colors.grey[100]
+                                        : Colors.grey[900]),
                               ),
                             ],
                           ),

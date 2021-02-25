@@ -59,10 +59,11 @@ class StatusPanel extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), color: panelColor),
       margin: EdgeInsets.all(10),
       height: 80,
       width: width / 2,
-      color: panelColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -72,7 +73,7 @@ class StatusPanel extends StatelessWidget {
                 fontWeight: FontWeight.bold, fontSize: 16, color: textColor),
           ),
           Text(
-            count,
+            count.toString(),
             style: TextStyle(
                 fontSize: 16, fontWeight: FontWeight.bold, color: textColor),
           )

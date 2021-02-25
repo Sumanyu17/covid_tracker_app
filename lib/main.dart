@@ -1,7 +1,7 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:tgd_covid_tracker/datasorce.dart';
-import 'package:tgd_covid_tracker/homepage.dart';
+import 'package:covid_tracker/datasorce.dart';
+import 'package:covid_tracker/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return DynamicTheme(
       data: (brightness) {
         return ThemeData(
-            primaryColor: primaryBlack,
+            primaryColor: Colors.red.shade600,
             fontFamily: 'Circular',
             brightness: brightness == Brightness.light
                 ? Brightness.light
